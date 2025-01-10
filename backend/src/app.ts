@@ -1,4 +1,6 @@
 import express from 'express';
+import productRoutes from './routes/productRoutes';
+import orderRoutes from './routes/orderRoutes';
 
 const app = express();
 
@@ -10,5 +12,7 @@ app.get('/', (req, res) => {
   res.send('¡Bienvenido al Langchain Sushi Chatbot!');
 });
 
-export default app;
+app.use('/api/products', productRoutes);
+app.use('/api/orders', orderRoutes);
 
+export default app;

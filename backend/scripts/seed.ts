@@ -1,6 +1,5 @@
-// scripts/seed.ts
 import { connectDB } from '../src/db';  // Ajusta la ruta a tu archivo de conexión
-import Product from '../src/models/Product';
+import Product from '../src/models/Products';
 
 const seedData = async () => {
   try {
