@@ -1,10 +1,22 @@
 // src/promptsTest.ts
+
 import { getChatbotPrompt } from '../prompts/prompts';
 
-const testPrompt = () => {
-  const userInput = '¿Cuáles son las especialidades del menú?';
-  const prompt = getChatbotPrompt(userInput);
-  console.log('Prompt generado:\n', prompt);
+const testPromptFunction = () => {
+  const userInputs = [
+    '¿Cuáles son las especialidades del menú?',
+    '¿Están abiertos los fines de semana?',
+    'Quiero hacer un pedido de sushi variado.'
+  ];
+
+  userInputs.forEach(input => {
+    const prompt = getChatbotPrompt(input);
+    console.log('----------------------------------------');
+    console.log(`Input: ${input}`);
+    console.log('Prompt Generado:');
+    console.log(prompt);
+    console.log('----------------------------------------\n');
+  });
 };
 
-testPrompt();
+testPromptFunction();
