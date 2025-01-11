@@ -39,7 +39,6 @@ export const processOrder = async (orderDetails: {
   }
 };
 
-// src/integratedChatbot.ts (continuación)
 
 export const handleUserRequest = async (userInput: string): Promise<string> => {
   const lowerInput = userInput.toLowerCase();
